@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+/* @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"); */
+
+@theme {
+  --color-primary: #5932ee;
+  --color-primary-dark: #5932ee;
+   
+  --color-default: #242424;
+  --color-third: #c9c3e0;
+  --color-background-light: #f9f9f9;
+  --color-background: #1b1b1b;
+  --color-mainclr : #FAE1D5;
+  --color-secondary-green : #41FFA7;
+  --color-txtclr : #323232;
+
+  --font-plus-jakarta: "Plus Jakarta Sans", sans-serif;
+
+  --text-base: 1rem;
+  --text-4xl: 2.25rem;
+
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+}
+
+:root {
+  --color-primary-gradient: linear-gradient(
+    180deg,
+    rgba(233, 228, 255, 1) 0%,
+    rgba(214, 204, 255, 1) 100%
+  );
+
+  --font-plus-jakarta: "Plus Jakarta Sans", sans-serif;
+  --foreground: #171717;
+}
+
+/* 🌟 Improved Text Selection Styling (Soft Neon Effect) */
+::selection {
+  background: #FAE1D5;
+  color: #ffffff;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+/* 🎨 Custom Scrollbar (Glassmorphism & Gradient Effect) */
+::-webkit-scrollbar {
+  width: 7px;
+  /* Slightly wider for better usability */
+  background: #111;
+  /* Keeps it modern */
+}
+
+/* Scrollbar Track (Glass Effect) */
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  /* Transparent look */
+  border-radius: 0px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Scrollbar Thumb (Gradient & Smooth Look) */
+::-webkit-scrollbar-thumb {
+  background: #FAE1D5;
+  border-radius: 0px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.category-list::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F5F5F5;
+  font-family: var(--font-plus-jakarta);
+  overflow-x: hidden;
+}
+
+.testimonials-swiper .slide-card {
+  background-color: #f9f9f9;
+  color: black;
+}
+
+.testimonials-swiper .swiper-slide-active .slide-card {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.bg-primary-gradient {
+  background: var(--color-primary-gradient);
+}
+
+.default-header-text {
+  @apply font-semibold text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl leading-tight;
+}
+
+.default-sub-header-text {
+  @apply font-semibold text-3xl  xl:text-4xl leading-tight;
+}
+
+.default-secondary-text {
+  @apply text-base  2xl:text-lg leading-normal 2xl:leading-8;
+}
+
+
+@media (max-width: 1024px) {
+ br{
+  display: none;
+ }
+}
+
+/* Range Slider Styles */
+input[type="range"].slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 5px;
+  outline: none;
+}
+
+input[type="range"].slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background: #1f2937;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+input[type="range"].slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  background: #1f2937;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}

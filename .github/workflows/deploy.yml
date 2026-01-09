@@ -1,0 +1,46 @@
+name: Apptage RevampCI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - revamp
+
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install & Build Project
+        run: |
+          npm ci
+          npm run build
+
+      - name: Sync files
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.GIT_CPANEL_SERVER }}
+          username: ${{ secrets.GIT_CPANEL_USER }}
+          password: ${{ secrets.GIT_CPANEL_PWD }}
+          port: ${{ secrets.GIT_CPANEL_PROTOCOL }}
+          source: "./out/*"
+          target: "/home/${{ secrets.GIT_CPANEL_USER }}/public_html/"
+
+      - name: Move Files After Upload
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.GIT_CPANEL_SERVER }}
+          username: ${{ secrets.GIT_CPANEL_USER }}
+          password: ${{ secrets.GIT_CPANEL_PWD }}
+          port: ${{ secrets.GIT_CPANEL_PROTOCOL }}
+          script: |
+            rsync -avh /home/${{ secrets.GIT_CPANEL_USER }}/public_html/out/ /home/${{ secrets.GIT_CPANEL_USER }}/public_html/
+            rm -rf /home/${{ secrets.GIT_CPANEL_USER }}/public_html/out/

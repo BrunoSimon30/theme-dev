@@ -4,17 +4,17 @@ const seasons = [
   {
     id: 1,
     name: "SUMMER",
-    image: "/img/home/ready/r1.jpg",
+    image: "/img/home/coll/cr1.webp",
   },
   {
     id: 2,
     name: "WINTER",
-    image: "/img/home/ready/r1.jpg",
+    image: "/img/home/coll/cr2.webp",
   },
   {
     id: 3,
     name: "ALL SEASONS",
-    image: "/img/home/ready/r1.jpg",
+    image: "/img/home/coll/cr3.webp",
   },
 ];
 

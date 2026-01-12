@@ -14,7 +14,14 @@ export default function Contact() {
         description="Get in touch with us"
       />
       <Header />
-      <section className="py-16 mt-26">
+      <section 
+        className="h-[40vh] mt-26 overflow-hidden flex items-center justify-center bg-cover bg-center bg-no-repeat relative"
+        style={{ backgroundImage: 'url(/img/banner/mban2.jpg)' }}
+      >
+        <div className="absolute inset-0 bg-black/40"></div>
+        <h1 className="text-white text-4xl font-bold relative z-10">Contact Us</h1>
+      </section>
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold mb-12 text-center">Contact Us</h1>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">

@@ -3,7 +3,7 @@
 const banners = [
   {
     id: 1,
-    image: "/img/home/ready/r1.jpg",
+    image: "/img/home/coll/c1.webp",
     category: "UNSTITCHED",
     subCategory: null,
     discount: "UPTO 40% OFF",
@@ -13,7 +13,7 @@ const banners = [
   },
   {
     id: 2,
-    image: "/img/home/ready/r1.jpg",
+    image: "/img/home/coll/c2.webp",
     category: "UNSTITCHED",
     subCategory: "2 PIECE",
     discount: "UPTO 30% OFF",
@@ -23,7 +23,7 @@ const banners = [
   },
   {
     id: 3,
-    image: "/img/home/ready/r1.jpg",
+    image: "/img/home/coll/c3.webp",
     category: "UNSTITCHED",
     subCategory: "3 PIECE",
     discount: "UPTO 40% OFF",
@@ -33,7 +33,7 @@ const banners = [
   },
   {
     id: 4,
-    image: "/img/home/ready/r1.jpg",
+    image: "/img/home/coll/c4.webp",
     category: "READY TO WEAR",
     subCategory: "EMBROIDERED",
     discount: "UPTO 50% OFF",
@@ -43,7 +43,7 @@ const banners = [
   },
   {
     id: 5,
-    image: "/img/home/ready/r1.jpg",
+    image: "/img/home/coll/c5.webp",
     category: "READY TO WEAR",
     subCategory: "PRINTED",
     discount: "UPTO 50% OFF",
@@ -53,7 +53,7 @@ const banners = [
   },
   {
     id: 6,
-    image: "/img/home/ready/r1.jpg",
+    image: "/img/home/coll/c6.webp",
     category: "READY TO WEAR",
     subCategory: null,
     discount: "UPTO 50% OFF",

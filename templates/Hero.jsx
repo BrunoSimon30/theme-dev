@@ -26,16 +26,38 @@ export default function HomePage() {
         modules={[Autoplay, Pagination, Navigation, EffectFade]}
         className="h-full w-full"
       >
+       
         <SwiperSlide>
           <img
-            src="/img/home/banner.jpg"
+            src="/img/banner/ban1.webp"
             alt="hero"
             className="w-full object-cover h-full"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="/img/home/banner.jpg"
+            src="/img/banner/ban2.webp"
+            alt="hero"
+            className="w-full object-cover h-full"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src="/img/banner/ban3.webp"
+            alt="hero"
+            className="w-full object-cover h-full"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src="/img/banner/ban4.webp"
+            alt="hero"
+            className="w-full object-cover h-full"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src="/img/banner/ban.webp"
             alt="hero"
             className="w-full object-cover h-full"
           />

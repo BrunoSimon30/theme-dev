@@ -176,7 +176,7 @@ export default function Header() {
         <div className="container mx-auto flex justify-between items-center">
           <div className="flex items-center space-x-2">
             <Link href="/">
-              <img src="/img/logo.svg" className="w-36 2xl:w-full" alt="" />
+              <img src="/img/logo1.png" className="w-32" alt="" />
             </Link>
           </div>
         

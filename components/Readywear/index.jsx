@@ -16,16 +16,12 @@ export default function Readywear() {
       key={index}
       className="w-[250px] h-[200px] overflow-hidden rounded-lg shadow-md"
     >
-      <img
-        src={`/img/home/ready/r1.jpg`}
+     
+       <img
+        src={`/img/home/ready/rr${index + 1}.webp`}
         alt={`image-${index + 1}`}
-        className="w-full h-full object-cover"
+        className="w-full h-full object-cover object-top"
       />
-       {/* <img
-        src={`/img/home/ready/r${index + 1}.jpg`}
-        alt={`image-${index + 1}`}
-        className="w-full h-full object-cover"
-      /> */}
     </div>
   ))}
         

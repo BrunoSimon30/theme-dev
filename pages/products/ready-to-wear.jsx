@@ -12,8 +12,12 @@ export default function ReadyToWear() {
         description="Browse our ready to wear collection"
       />
       <Header />
-      <section className="bg-slate-800 h-[40vh] mt-26 overflow-hidden flex items-center justify-center">
-        <h1 className="text-white text-4xl font-bold">Ready To Wear</h1>
+      <section 
+        className="h-[40vh] mt-26 overflow-hidden flex items-center justify-center bg-cover bg-center bg-no-repeat relative"
+        style={{ backgroundImage: 'url(/img/banner/ban1.webp)' }}
+      >
+        <div className="absolute inset-0 bg-black/40"></div>
+        <h1 className="text-white text-4xl font-bold relative z-10">Ready To Wear</h1>
       </section>
       <ProductListing />
       <Footer />

@@ -11,7 +11,14 @@ export default function TermsConditions() {
         description="Terms and conditions"
       />
       <Header />
-      <section className="py-16 mt-26">
+      <section 
+        className="h-[40vh] mt-26 overflow-hidden flex items-center justify-center bg-cover bg-center bg-no-repeat relative"
+        style={{ backgroundImage: 'url(/img/banner/ban2.webp)' }}
+      >
+        <div className="absolute inset-0 bg-black/40"></div>
+        <h1 className="text-white text-4xl font-bold relative z-10">Terms & Conditions</h1>
+      </section>
+      <section className="py-16">
         <div className="container mx-auto px-4 max-w-3xl">
           <h1 className="text-4xl font-bold mb-8">Terms & Conditions</h1>
           <div className="space-y-6 text-gray-700">

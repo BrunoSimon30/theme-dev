@@ -10,7 +10,13 @@ export default function shop() {
     <>
      <Meta title={AppConfig.title} description={AppConfig.description} />
      <Header />
-     <section className="bg-slate-800 h-[40vh] mt-26 overflow-hidden"></section>
+     <section 
+        className="h-[40vh] mt-26 overflow-hidden flex items-center justify-center bg-cover bg-center bg-no-repeat relative"
+        style={{ backgroundImage: 'url(/img/banner/mban.jpg)' }}
+      >
+        <div className="absolute inset-0 bg-black/40"></div>
+        <h1 className="text-white text-4xl font-bold relative z-10">Shop</h1>
+      </section>
     <ProductListing/>
     <Footer />
     </>

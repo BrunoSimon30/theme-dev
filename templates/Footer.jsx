@@ -7,44 +7,49 @@ import { FaFacebookF,FaInstagram  } from "react-icons/fa";
 
 const footerMenus = [
   {
-    title: "Advisory & Design",
+    title: "Shop",
     links: [
-       { title: "Advisory", link: "/development/app-development" },
-      { title: "Design", link: "" },]
-  },
-  {
-    title: "Development",
-    links: [
-      { title: "App Development", link: "/development/app-development" },
-      { title: "Web Development", link: "" },
-      { title: "Game Development", link: "" },
-      { title: "Custom Software Development", link: "" },
-      { title: "Artificial Intelligence", link: "" },
+      { title: "All Products", link: "/products" },
+      { title: "Ready To Wear", link: "/products/ready-to-wear" },
+      { title: "Unstitched", link: "/products/unstitched" },
+      { title: "Accessories", link: "/products/accessories" },
+      { title: "Sale", link: "/products/sale" },
     ],
   },
   {
-    title: "Ecommerce",
+    title: "Customer Service",
     links: [
-      { title: "Shopify", link: "/development/app-development" },
-      { title: "Bigcommerce", link: "" },
-      { title: "Magento", link: "" },
-      { title: "WooCommerce", link: "" },
-      { title: "Custom Ecommerce", link: "" },
+      { title: "Contact Us", link: "/contact" },
+      { title: "FAQ", link: "/faq" },
+      { title: "Shipping & Returns", link: "/contact" },
+      { title: "Size Guide", link: "/contact" },
+      { title: "Track Order", link: "/account/orders" },
     ],
   },
   {
-    title: "Data & Cloud",
+    title: "Account",
     links: [
-      { title: "Cloud Consulting", link: "" },
-      { title: "Data", link: "" },
+      { title: "My Account", link: "/account" },
+      { title: "My Orders", link: "/account/orders" },
+      { title: "Wishlist", link: "/account/wishlist" },
+      { title: "Login", link: "/login" },
+      { title: "Register", link: "/register" },
     ],
   },
   {
-    title: "Solutions",
+    title: "Information",
+    links: [
+      { title: "About Us", link: "/about" },
+      { title: "Privacy Policy", link: "/privacy-policy" },
+      { title: "Terms & Conditions", link: "/terms-conditions" },
+    ],
+  },
+  {
+    title: "Quick Links",
    links: [
-      { title: "Staff Augmentation", isChip : true , link: "" },
-      { title: "Microsoft Dynamics",isChip : true, link: "" },
-      { title: "Hubspot", isChip : true,link: "" },
+      { title: "Home", link: "/" },
+      { title: "Shop", link: "/shop" },
+      { title: "Cart", link: "/cart" },
     ],
   },
 ];
@@ -106,7 +111,7 @@ export default function Footer() {
             </div>
             <div className="flex items-start space-x-2 text-[#C9C3E0]">
               <p className="max-w-[250px] xl:max-w-2xl">
-                11658 S. Copper Sky Dr, South Jordan, UT, 84009, USA
+                123 Fashion Street, Karachi, Pakistan
               </p>
             </div>
           </div>
@@ -159,7 +164,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="flex flex-col md:flex-row justify-between items-center pt-12 border-t border-gray-800">
           <p className="text-[#C9C3E0] text-md mb-4 md:mb-0 text-center xl:text-left w-full">
-            © {new Date().getFullYear()}   Billion Logics, LLC. All Rights Reserved.
+            © {new Date().getFullYear()} {AppConfig.site_name}. All Rights Reserved.
           </p>
           <div className="hidden  lg:flex items-center space-x-4 w-full justify-end">
             <span className="text-[#C9C3E0] text-md">

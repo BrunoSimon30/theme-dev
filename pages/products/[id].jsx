@@ -12,6 +12,7 @@ export default function ProductDetail() {
   const [selectedSize, setSelectedSize] = useState("M");
   const [selectedColor, setSelectedColor] = useState("Pink");
   const [quantity, setQuantity] = useState(1);
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
   const sizes = ["XS", "S", "M", "L", "XL", "XXL"];
   const colors = ["Pink", "Blue", "Green", "Yellow"];
@@ -23,31 +24,55 @@ export default function ProductDetail() {
         description="View product details and add to cart"
       />
       <Header />
-      <section className="py-16 mt-26">
+      <section 
+        className="h-[40vh] mt-26 overflow-hidden flex items-center justify-center bg-cover bg-center bg-no-repeat relative"
+        style={{ backgroundImage: 'url(/img/banner/ban.webp)' }}
+      >
+        <div className="absolute inset-0 bg-black/40"></div>
+        <h1 className="text-white text-4xl font-bold relative z-10">Product Details</h1>
+      </section>
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Product Images */}
             <div>
               <div className="aspect-square overflow-hidden rounded-lg bg-gray-100 mb-4">
-                <img
-                  src="/img/home/ready/r1.jpg"
-                  alt="Product"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="grid grid-cols-4 gap-4">
-                {[1, 2, 3, 4].map((i) => (
-                  <div
-                    key={i}
-                    className="aspect-square overflow-hidden rounded-lg bg-gray-100 cursor-pointer hover:ring-2 ring-gray-400"
-                  >
+                {(() => {
+                  const baseId = id ? parseInt(id) : 1;
+                  const imageId = baseId + selectedImageIndex;
+                  const finalId = imageId > 36 ? imageId - 36 : imageId;
+                  return (
                     <img
-                      src="/img/home/ready/r1.jpg"
-                      alt={`Product ${i}`}
+                      src={`/img/product/p${finalId}.webp`}
+                      alt="Product"
                       className="w-full h-full object-cover"
                     />
-                  </div>
-                ))}
+                  );
+                })()}
+              </div>
+              <div className="grid grid-cols-4 gap-4">
+                {[0, 1, 2, 3].map((i) => {
+                  const baseId = id ? parseInt(id) : 1;
+                  const thumbId = baseId + i;
+                  const finalId = thumbId > 36 ? thumbId - 36 : thumbId;
+                  return (
+                    <div
+                      key={i}
+                      onClick={() => setSelectedImageIndex(i)}
+                      className={`aspect-square overflow-hidden rounded-lg bg-gray-100 cursor-pointer transition-all ${
+                        selectedImageIndex === i
+                          ? 'ring-2 ring-gray-900 ring-offset-2'
+                          : 'hover:ring-2 ring-gray-400'
+                      }`}
+                    >
+                      <img
+                        src={`/img/product/p${finalId}.webp`}
+                        alt={`Product ${i + 1}`}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  );
+                })}
               </div>
             </div>
 

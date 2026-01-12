@@ -52,7 +52,14 @@ export default function FAQ() {
         description="Frequently asked questions"
       />
       <Header />
-      <section className="py-16 mt-26">
+      <section 
+        className="h-[40vh] mt-26 overflow-hidden flex items-center justify-center bg-cover bg-center bg-no-repeat relative"
+        style={{ backgroundImage: 'url(/img/banner/ban.webp)' }}
+      >
+        <div className="absolute inset-0 bg-black/40"></div>
+        <h1 className="text-white text-4xl font-bold relative z-10">FAQ</h1>
+      </section>
+      <section className="py-16">
         <div className="container mx-auto px-4 max-w-3xl">
           <h1 className="text-4xl font-bold mb-12 text-center">
             Frequently Asked Questions

@@ -21,17 +21,13 @@ export default function Home() {
       <Header />
       <Hero />
       <Readywear />
-   <Products/>
-   <CenterBannner/>
-   <Products/>
-   <CenterBannner/>
+      <Products />
+      <CenterBannner banimg="/img/banner/mban.jpg" />
+      <Products />
+      <CenterBannner banimg="/img/banner/mban1.jpg" />
       <PromotionalBanners />
-      <CenterBannner/>
+      <CenterBannner banimg="/img/banner/mban2.jpg" />
       <ShopBySeasons />
-
-      
-
-
       <Footer />
     </>
   );

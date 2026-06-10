@@ -19,7 +19,7 @@ export default function ContactFormSection() {
 
             {/* Main Heading */}
             <h2 className="default-header-text text-white">
-              Let's Make
+              Let&apos;s Make
               <br />
               Something <span className="text-primary">Amazing Together!</span>
             </h2>
@@ -30,9 +30,9 @@ export default function ContactFormSection() {
                 Got Questions? We Have Answers.
               </h3>
               <p className="text-[#C9C3E0] default-secondary-text ">
-                Whether you're looking to build a groundbreaking app, a
+                Whether you&apos;re looking to build a groundbreaking app, a
                 cutting-edge website, or something completely custom—our team is
-                here to help you turn your ideas into reality. Don't just
+                here to help you turn your ideas into reality. Don&apos;t just
                 contact us—start a conversation that could change your business
                 forever.
               </p>

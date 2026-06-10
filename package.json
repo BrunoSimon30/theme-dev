@@ -28,6 +28,8 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "eslint": "^9.39.4",
+    "eslint-config-next": "^15.2.2",
     "prettier": "3.6.2",
     "tailwindcss": "^4"
   }

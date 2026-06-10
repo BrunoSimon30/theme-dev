@@ -7,7 +7,7 @@ const PageBreadcrumb = ({className, crumbs, activePath }) => {
       <nav>
         <ol className="flex items-center gap-1.5">
           {crumbs.map((crumb, index) => (
-            <li>
+            <li key={crumb.key ?? index}>
               <Link
                 className={`inline-flex items-center gap-1.5 text-sm text-black ${activePath === crumb.key ? "font-bold text-primary" : ""}`}
                 href={crumb.href}
